@@ -1,0 +1,42 @@
+ubuntu@ip-172-31-2-91:~/week6$ ~/docker_build_image.sh simple-server:1.0
+>building image...
+[+] Building 41.0s (9/9) FINISHED                                                           docker:default
+ => [internal] load .dockerignore                                                                     0.1s
+ => => transferring context: 53B                                                                      0.0s
+ => [internal] load build definition from Dockerfile                                                  0.1s
+ => => transferring dockerfile: 122B                                                                  0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                        2.6s
+ => [1/4] FROM docker.io/library/node:latest@sha256:32ec50b65ac9572eda92baa6004a04dbbfc8021ea806fa6  20.5s
+ => => resolve docker.io/library/node:latest@sha256:32ec50b65ac9572eda92baa6004a04dbbfc8021ea806fa62  0.0s
+ => => sha256:980cf5b26237081e7e05515f385cd8eb270cf41fd13538a146c473040b10abd8 2.00kB / 2.00kB        0.0s
+ => => sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2 24.03MB / 24.03MB      2.7s
+ => => sha256:32ec50b65ac9572eda92baa6004a04dbbfc8021ea806fa62d37336183cad04e6 1.21kB / 1.21kB        0.0s
+ => => sha256:250e9c100ea2ad5745b8c69edef0c3dcf9b2cbb055fb7dbd4fe7fb3f9fa45bae 7.24kB / 7.24kB        0.0s
+ => => sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711 49.55MB / 49.55MB      3.6s
+ => => sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc 64.11MB / 64.11MB      2.3s
+ => => sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db94ca61082f657 211.00MB / 211.00MB   10.9s
+ => => sha256:5f1526a28cf91707a0af45c5624979f67215b1330efd66c05a0f94839c96f0bc 3.37kB / 3.37kB        3.9s
+ => => extracting sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711             2.1s
+ => => sha256:d89b7e3d6e3496e51a2a10dfea2cbf36ba8501b95bb374489b955e39e4d9ffdc 47.52MB / 47.52MB      5.8s
+ => => sha256:8831f71a931426419aadda667fd199559851d94658edf73c637801f675fbc463 2.27MB / 2.27MB        4.5s
+ => => sha256:beef33e6bd26ef8d9ecfb29760a482aab3272d855db9e4d0c0fd4131d54ef827 449B / 449B            4.8s
+ => => extracting sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2             0.5s
+ => => extracting sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc             2.3s
+ => => extracting sha256:6e5565e0ba8dfce32b9049f21ceeb212946e0bb810d94cbd2db94ca61082f657             6.9s
+ => => extracting sha256:5f1526a28cf91707a0af45c5624979f67215b1330efd66c05a0f94839c96f0bc             0.0s
+ => => extracting sha256:d89b7e3d6e3496e51a2a10dfea2cbf36ba8501b95bb374489b955e39e4d9ffdc             1.9s
+ => => extracting sha256:8831f71a931426419aadda667fd199559851d94658edf73c637801f675fbc463             0.0s
+ => => extracting sha256:beef33e6bd26ef8d9ecfb29760a482aab3272d855db9e4d0c0fd4131d54ef827             0.0s
+ => [internal] load build context                                                                     0.0s
+ => => transferring context: 898B                                                                     0.0s
+ => [2/4] WORKDIR /app                                                                               15.5s
+ => [3/4] COPY . /app                                                                                 0.0s
+ => [4/4] RUN npm install                                                                             2.1s
+ => exporting to image                                                                                0.1s
+ => => exporting layers                                                                               0.0s
+ => => writing image sha256:e4f528849ed1652fa85cd28a3f366b96f62658a7f2667b7961f96b7908397b00          0.0s
+ => => naming to docker.io/library/simple-server:1.0                                                  0.0s
+>verifying images...
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json": dial unix /var/run/docker.sock: connect: permission denied
+>done.
+

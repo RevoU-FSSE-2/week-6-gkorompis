@@ -1,0 +1,179 @@
+>preparing installation...
+sudo: yum: command not found
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'apt' instead of 'apt-transport-https'
+Note, selecting 'gpg-agent' instead of 'gnupg-agent'
+apt is already the newest version (2.4.9).
+apt set to manually installed.
+ca-certificates is already the newest version (20211016ubuntu0.22.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.81.0-1ubuntu1.10).
+curl set to manually installed.
+gpg-agent is already the newest version (2.2.27-3ubuntu2.1).
+gpg-agent set to manually installed.
+software-properties-common is already the newest version (0.99.22.6).
+software-properties-common set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+>adding docker official GPG key...
+>setting up repository...
+>installing docker engine...
+Get:1 https://download.docker.com/linux/ubuntu jammy InRelease [48.9 kB]
+Get:2 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [20.4 kB]                                    
+Hit:3 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy InRelease                                               
+Get:4 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                   
+Get:5 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:7 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:8 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:9 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:10 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:11 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:12 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:13 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [799 kB]
+Get:14 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [202 kB]
+Get:15 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [15.4 kB]
+Get:16 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [580 kB]
+Get:17 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [90.8 kB]
+Get:18 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [528 B]
+Get:19 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [946 kB]
+Get:20 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [204 kB]
+Get:21 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [20.7 kB]
+Get:22 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [41.6 kB]
+Get:23 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [9704 B]
+Get:24 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [476 B]
+Get:25 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [40.9 kB]
+Get:26 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [10.2 kB]
+Get:27 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:28 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:29 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [22.2 kB]
+Get:30 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [15.4 kB]
+Get:31 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [579 kB]    
+Get:32 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [580 B]
+Get:33 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:34 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [142 kB]          
+Get:35 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11.0 kB]
+Get:36 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [568 kB]
+Get:37 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [89.0 kB]
+Get:38 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [532 B]
+Get:39 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [751 kB]
+Get:40 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [134 kB]
+Get:41 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [15.8 kB]
+Get:42 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [36.5 kB]
+Get:43 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7060 B]
+Get:44 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Fetched 26.1 MB in 4s (7212 kB/s)                                     
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  docker-ce-rootless-extras libltdl7 libslirp0 pigz slirp4netns
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite
+The following NEW packages will be installed:
+  containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin libltdl7
+  libslirp0 pigz slirp4netns
+0 upgraded, 10 newly installed, 0 to remove and 82 not upgraded.
+Need to get 114 MB of archives.
+After this operation, 414 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 https://download.docker.com/linux/ubuntu jammy/stable amd64 containerd.io amd64 1.6.21-1 [28.3 MB]
+Get:2 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 pigz amd64 2.6-1 [63.6 kB]
+Get:3 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libltdl7 amd64 2.4.6-15build2 [39.6 kB]
+Get:4 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libslirp0 amd64 4.6.1-1build1 [61.5 kB]
+Get:5 http://ap-southeast-3.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 slirp4netns amd64 1.0.1-2 [28.2 kB]
+Get:6 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-buildx-plugin amd64 0.11.1-1~ubuntu.22.04~jammy [28.2 MB]
+Get:7 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce-cli amd64 5:24.0.4-1~ubuntu.22.04~jammy [13.3 MB]
+Get:8 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce amd64 5:24.0.4-1~ubuntu.22.04~jammy [22.9 MB]
+Get:9 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce-rootless-extras amd64 5:24.0.4-1~ubuntu.22.04~jammy [9033 kB]
+Get:10 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-compose-plugin amd64 2.19.1-1~ubuntu.22.04~jammy [11.9 MB]
+Fetched 114 MB in 2s (64.2 MB/s)                 
+Selecting previously unselected package pigz.
+(Reading database ... 64295 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.6-1_amd64.deb ...
+Unpacking pigz (2.6-1) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../1-containerd.io_1.6.21-1_amd64.deb ...
+Unpacking containerd.io (1.6.21-1) ...
+Selecting previously unselected package docker-buildx-plugin.
+Preparing to unpack .../2-docker-buildx-plugin_0.11.1-1~ubuntu.22.04~jammy_amd64.deb ...
+Unpacking docker-buildx-plugin (0.11.1-1~ubuntu.22.04~jammy) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../3-docker-ce-cli_5%3a24.0.4-1~ubuntu.22.04~jammy_amd64.deb ...
+Unpacking docker-ce-cli (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../4-docker-ce_5%3a24.0.4-1~ubuntu.22.04~jammy_amd64.deb ...
+Unpacking docker-ce (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../5-docker-ce-rootless-extras_5%3a24.0.4-1~ubuntu.22.04~jammy_amd64.deb ...
+Unpacking docker-ce-rootless-extras (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Selecting previously unselected package docker-compose-plugin.
+Preparing to unpack .../6-docker-compose-plugin_2.19.1-1~ubuntu.22.04~jammy_amd64.deb ...
+Unpacking docker-compose-plugin (2.19.1-1~ubuntu.22.04~jammy) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../7-libltdl7_2.4.6-15build2_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-15build2) ...
+Selecting previously unselected package libslirp0:amd64.
+Preparing to unpack .../8-libslirp0_4.6.1-1build1_amd64.deb ...
+Unpacking libslirp0:amd64 (4.6.1-1build1) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../9-slirp4netns_1.0.1-2_amd64.deb ...
+Unpacking slirp4netns (1.0.1-2) ...
+Setting up docker-buildx-plugin (0.11.1-1~ubuntu.22.04~jammy) ...
+Setting up containerd.io (1.6.21-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-compose-plugin (2.19.1-1~ubuntu.22.04~jammy) ...
+Setting up libltdl7:amd64 (2.4.6-15build2) ...
+Setting up docker-ce-cli (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Setting up libslirp0:amd64 (4.6.1-1build1) ...
+Setting up pigz (2.6-1) ...
+Setting up docker-ce-rootless-extras (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Setting up slirp4netns (1.0.1-2) ...
+Setting up docker-ce (5:24.0.4-1~ubuntu.22.04~jammy) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Scanning processes...                                                                                                    
+Scanning linux images...                                                                                                 
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+>verifiying installation is successful...
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete 
+Digest: sha256:926fac19d22aa2d60f1a276b66a20eb765fbeea2db5dbdaafeb456ad8ce81598
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+>done.

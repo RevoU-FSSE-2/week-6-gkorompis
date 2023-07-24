@@ -1,0 +1,24 @@
+ubuntu@ip-172-31-2-91:~/week6$ ~/docker_build_image.sh simple-server:1.0
+>building image...
+[+] Building 1.5s (9/9) FINISHED                                                            docker:default
+ => [internal] load build definition from Dockerfile                                                  0.0s
+ => => transferring dockerfile: 122B                                                                  0.0s
+ => [internal] load .dockerignore                                                                     0.0s
+ => => transferring context: 53B                                                                      0.0s
+ => [internal] load metadata for docker.io/library/node:latest                                        1.5s
+ => [1/4] FROM docker.io/library/node:latest@sha256:32ec50b65ac9572eda92baa6004a04dbbfc8021ea806fa62  0.0s
+ => [internal] load build context                                                                     0.0s
+ => => transferring context: 121B                                                                     0.0s
+ => CACHED [2/4] WORKDIR /app                                                                         0.0s
+ => CACHED [3/4] COPY . /app                                                                          0.0s
+ => CACHED [4/4] RUN npm install                                                                      0.0s
+ => exporting to image                                                                                0.0s
+ => => exporting layers                                                                               0.0s
+ => => writing image sha256:e4f528849ed1652fa85cd28a3f366b96f62658a7f2667b7961f96b7908397b00          0.0s
+ => => naming to docker.io/library/simple-server:1.0                                                  0.0s
+>verifying images...
+REPOSITORY      TAG       IMAGE ID       CREATED         SIZE
+simple-server   1.0       e4f528849ed1   4 minutes ago   1.1GB
+hello-world     latest    9c7a54a9a43c   2 months ago    13.3kB
+>done.
+
