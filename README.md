@@ -1,6 +1,10 @@
 # Simple Server Application
 Getting started to backend development and cloud computing by serving a simple node js application on docker container in a AWS cloud enviroment.
-<img width="1334" alt="hello-world" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/bf069119-0beb-4a44-b5f2-25f447d59cd8">
+<br>
+
+<img width="916" alt="hello-world-lg" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/f1a5cc5d-ec12-454b-8ca3-c84c10abc642">
+
+<br>
 
 ## Introduction
 Docker is a powerful tool that offers several benefits for modern application development and deployment. One of its key advantages is the ability to isolate applications in containers, ensuring consistent dependencies and configurations across different environments. This portability allows developers to deploy applications seamlessly on various platforms, from local development machines to production servers. Additionally, Docker's containerization approach enhances resource efficiency by sharing the host OS kernel among containers, resulting in faster startup times and reduced memory usage. With versioned images, Docker enables version control, making it easy to track changes, rollback to previous states, and maintain consistency across development, staging, and production environments. Furthermore, Docker facilitates scalability by allowing effortless replication and management of multiple container instances, ensuring high availability and performance during peak demand. Combined with container orchestration tools like Kubernetes, Docker streamlines the deployment and management of complex, distributed applications, making it an indispensable tool for modern software development workflows. For these reasons, Docker is used in this project.
@@ -26,12 +30,12 @@ As a solution to lower variable cost provisioning for the desired computing spec
 ```
 11. To note, pem file needs to be configured to be read only before login via SSH protocol
 ```
-    chmod 400 <pem_file_name>.pem
+chmod 400 <pem_file_name>.pem
 ```
 Once set up, you can download this repository on your virtual machine.
 ```
-    git clone https://github.com/RevoU-FSSE-2/week-6-gkorompis
-    cd week-6-gkorompis
+git clone https://github.com/RevoU-FSSE-2/week-6-gkorompis
+cd week-6-gkorompis
 ```
 
 ## Installing Docker
