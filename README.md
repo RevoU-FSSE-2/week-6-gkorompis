@@ -36,14 +36,14 @@ Once set up, you can download this repository on your virtual machine.
 ## Installing Docker
 Docker can be installed by running this command
 ```
-    chmod 777 install_docker.sh
-    ./install_docker.sh
+chmod 777 install_docker.sh
+./install_docker.sh
 ```
 This bash script consisted of:
 1. Preparing necessary package update and installation
 ```
-    sudo yum update -y
-    sudo apt-get install -y \
+sudo yum update -y
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -52,26 +52,31 @@ This bash script consisted of:
 ```
 2. Adding docker official GPG key
 ```
-    sudo install -m 0755 -d /etc/apt/keyrings
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-    sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 3. Setting up repository
 ```
-    echo \
+echo \
     "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
     "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 4. Installing docker engine
 ```
-    sudo apt-get update
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 5. Verifying that installation is successful
 ```
-    sudo docker run hello-world
+sudo docker run hello-world
 ```
+<img width="1329" alt="week6-ss1-docker" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/b37a2f90-95c3-445d-97d9-09925923a9c1">
+```
+docker --version
+```
+<img width="898" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/b01df24f-6eea-401f-93da-b757d74210cc">
 
 ## Application Deployment
 
