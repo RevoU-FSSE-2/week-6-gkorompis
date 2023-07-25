@@ -1,5 +1,6 @@
 # Simple Server Application
 Getting started to backend development and cloud computing by serving a simple node js application on docker container in a AWS cloud enviroment.
+<img width="1334" alt="hello-world" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/bf069119-0beb-4a44-b5f2-25f447d59cd8">
 
 ## Introduction
 Docker is a powerful tool that offers several benefits for modern application development and deployment. One of its key advantages is the ability to isolate applications in containers, ensuring consistent dependencies and configurations across different environments. This portability allows developers to deploy applications seamlessly on various platforms, from local development machines to production servers. Additionally, Docker's containerization approach enhances resource efficiency by sharing the host OS kernel among containers, resulting in faster startup times and reduced memory usage. With versioned images, Docker enables version control, making it easy to track changes, rollback to previous states, and maintain consistency across development, staging, and production environments. Furthermore, Docker facilitates scalability by allowing effortless replication and management of multiple container instances, ensuring high availability and performance during peak demand. Combined with container orchestration tools like Kubernetes, Docker streamlines the deployment and management of complex, distributed applications, making it an indispensable tool for modern software development workflows. For these reasons, Docker is used in this project.
@@ -34,12 +35,12 @@ Once set up, you can download this repository on your virtual machine.
 ```
 
 ## Installing Docker
-Docker can be installed by running this command
+Docker can be installed by running this command:
 ```
 chmod 777 install_docker.sh
 ./install_docker.sh
 ```
-This bash script consisted of:
+This bash script consists of,
 1. Preparing necessary package update and installation
 ```
 sudo yum update -y
@@ -73,10 +74,11 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker run hello-world
 ```
 <img width="1329" alt="week6-ss1-docker" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/b37a2f90-95c3-445d-97d9-09925923a9c1">
+
 ```
 docker --version
 ```
-<img width="898" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/b01df24f-6eea-401f-93da-b757d74210cc">
+<img width="881" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3c22e47d-88e0-4fd8-bb39-9335a294179d">
 
 ## Application Deployment
 
