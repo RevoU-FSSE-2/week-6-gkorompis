@@ -28,7 +28,7 @@ As a solution to lower variable cost provisioning for the desired computing spec
 ```
     ssh -i <pem_file_name>.pem ubuntu@<ipv4_address>
 ```
-11. To note, pem file needs to be configured to be read only before login via SSH protocol
+11. To note, pem file needs to be configured as "read only" prior logging in via SSH protocol
 ```
 chmod 400 <pem_file_name>.pem
 ```
