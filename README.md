@@ -84,7 +84,7 @@ docker --version
 ```
 <img width="881" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3c22e47d-88e0-4fd8-bb39-9335a294179d">
 
-## Application Deployment
+## Deploying Application on Docker
 1. Create working directory for Dockerfile and node JS file
 2. Configure package.json that corresponds to application requirements
 ```
@@ -128,15 +128,21 @@ docker build -t <tag_name>
 ```
 docker images
 ```
+<img width="1288" alt="docker images" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/672aa866-028f-45a4-b310-421a115fed6b">
+
 6. Start and server the application by running this command:
 ```
 docker run -p 8000:3001 <tag_name>
 ```
+<img width="1293" alt="application running in docker" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/97b865d1-c18d-43e0-af73-2e98498377e5">
+
 7. Verify the container has been built by running this command:
 ```
 docker ps
 ```
-To note, in order to detach from docker session you may add -d when starting the container
+<img width="1420" alt="docker ps" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3bfd109a-f426-41b8-85ca-0222cc6bbea8">
+
+To note, in order to run and detach right away from docker session you may need to specify -d flag when starting the container
 ```
 docker run -d -p 8000:3001 <tag_name>
 ```
