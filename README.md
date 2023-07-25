@@ -85,7 +85,62 @@ docker --version
 <img width="881" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3c22e47d-88e0-4fd8-bb39-9335a294179d">
 
 ## Application Deployment
+1. Create working directory for Dockerfile and node JS file
+2. Configure package.json that corresponds to application requirements
+```
+{
+  "name": "Simple Server App",
+  "version": "1.0.0",
+  "description": "Simple server app for week 6 assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
+```
+3. Configure Dockerfile to build the application image
+```
+#Pulling the latest node image to set up the prerequisite environment
+FROM node:latest
 
+#Defining working directory to execute subsequent commands inside the container
+WORKDIR /app
 
+#Copying all the files and directories from the host machine into the specified working directory inside the container. All files and directories that are listed in gitignore file will not be copied into the container.
+COPY . .
 
+#RUN will instruct docker to run npm install only during the image build process in order to install all necessary node JS packages as specified in package.json
+RUN npm install
 
+#CMD will instruct docker to run the command specified after, upon starting running the container
+CMD ["node", "app.js"]
+```
+4. Build the image using the dockerfile. NOTE: the command needs to be run on the same location with Dockerfile and all the necessary application files
+```
+docker build -t <tag_name>
+```
+5. Verify the image has been built by running this command:
+```
+docker images
+```
+6. Start and server the application by running this command:
+```
+docker run -p 8000:3001 <tag_name>
+```
+7. Verify the container has been built by running this command:
+```
+docker ps
+```
+To note, in order to detach from docker session you may add -d when starting the container
+```
+docker run -d -p 8000:3001 <tag_name>
+```
+8. Stop the container by running this command:
+```
+docker stop <container_id>
+```
