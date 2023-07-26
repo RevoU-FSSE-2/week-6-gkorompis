@@ -26,7 +26,7 @@ As a solution to lower variable cost provisioning for the desired computing spec
 9. Lastly, configure storage to be provisioned, in this project 100 GiB gp2 is selected. Finally click launch instance.
 10. Once has been launched, EC2 can be access using SSH protocol via Public IPv4 address
 ```
-    ssh -i <pem_file_name>.pem ubuntu@<ipv4_address>
+ssh -i <pem_file_name>.pem ubuntu@<ipv4_address>
 ```
 11. To note, pem file needs to be configured to be read only before login via SSH protocol
 ```
@@ -145,7 +145,7 @@ docker ps
 ```
 <img width="1420" alt="docker ps" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3bfd109a-f426-41b8-85ca-0222cc6bbea8">
 
-or alternatively, you do this to verify your node JS application is running:
+or alternatively, you can do this to verify your node JS application is running:
 ```
 curl http://localhost:8080
 ```
