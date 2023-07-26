@@ -85,8 +85,11 @@ docker --version
 <img width="881" alt="week6-ss2-docker-version" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3c22e47d-88e0-4fd8-bb39-9335a294179d">
 
 ## Deploying Application on Docker
-1. Create working directory for Dockerfile and node JS file
-2. Configure package.json that corresponds to application requirements
+1. Create working directory for Dockerfile and node JS file:
+```
+mkdir backend
+```
+2. Configure package.json that corresponds to application requirements:
 ```
 {
   "name": "Simple Server App",
@@ -103,7 +106,7 @@ docker --version
   }
 }
 ```
-3. Configure Dockerfile to build the application image
+3. Configure Dockerfile to build the application image:
 ```
 #Pulling the latest node image to set up the prerequisite environment
 FROM node:latest
@@ -120,7 +123,7 @@ RUN npm install
 #CMD will instruct docker to run the command specified after, upon starting running the container
 CMD ["node", "app.js"]
 ```
-4. Build the image using the dockerfile. NOTE: the command needs to be run on the same location with Dockerfile and all the necessary application files
+4. Build the image using the dockerfile (NOTE: the command needs to be run on the same location with Dockerfile and all the necessary application files):
 ```
 docker build -t <tag_name>
 ```
@@ -159,12 +162,12 @@ docker stop <container_id>
 
 ## Deploying Using docker-compose
 Alternatively, you can build image and run a container using docker-compose.
-1. First, make sure that docker-compose is installed. If it is not, install by using this command
+1. First, make sure that docker-compose is installed. If it is not, install by using this command:
 ```
 sudo apt update
 sudo apt install docker-compose
 ```
-2. Create yaml file in the same directory with your Dockerfile and application files
+2. Create yaml file in the same directory with your Dockerfile and application files:
 ```
 version: "3.9"  # Use the appropriate version of Docker Compose
 
@@ -179,14 +182,14 @@ services:
     volumes:
       - .:/usr/src/app
 ```
-3. Build the image and then run the container using docker-compose in the same directory with your yaml file.
+3. Build the image and then run the container using docker-compose in the same directory with your yaml file:
 ```
 docker-compose build
 docker-compose up
 ```
 <img width="1195" alt="docker-compose-build" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/6322e44d-c94c-4c70-a76b-5c7f52c381f7">
 
-4. Verify that your node JS application is running
+4. Verify that your node JS application is running:
 ```
 curl http://localhost:8000/
 ```
