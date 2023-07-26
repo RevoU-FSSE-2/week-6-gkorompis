@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 #Exposing application port
-EXPOSE 3001
+EXPOSE 3000
 
 #CMD will instruct docker to run the command specified after, upon starting running the container
 CMD ["node", "app.js"]

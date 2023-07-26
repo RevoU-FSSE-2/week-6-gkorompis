@@ -1,0 +1,12 @@
+version: "3.9"  # Use the appropriate version of Docker Compose
+
+services:
+  nodejs_app:
+    build:
+      context: . # Path to the directory containing your application files
+      dockerfile: Dockerfile  # Optional if your Dockerfile has the default name 'Dockerfile'
+    image: simple-server:1.8  # Set the image name and version tag here
+    ports:
+      - "8000:3000"
+    volumes:
+      - .:/usr/src/app
