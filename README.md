@@ -39,7 +39,7 @@ cd week-6-gkorompis
 ```
 
 ## Installing Docker
-Docker can be installed by running this command:
+Assuming, you are using linux operating system, Docker can be installed by running this command:
 ```
 chmod 777 install_docker.sh
 ./install_docker.sh
