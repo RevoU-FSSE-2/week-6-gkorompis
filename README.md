@@ -26,9 +26,9 @@ As a solution to lower variable cost provisioning for the desired computing spec
 9. Lastly, configure storage to be provisioned, in this project 100 GiB gp2 is selected. Finally click launch instance.
 10. Once has been launched, EC2 can be access using SSH protocol via Public IPv4 address
 ```
-ssh -i <pem_file_name>.pem ubuntu@<ipv4_address>
+    ssh -i <pem_file_name>.pem ubuntu@<ipv4_address>
 ```
-11. To note, pem file needs to be configured as "read only" prior logging in via SSH protocol
+11. To note, pem file needs to be configured to be read only before login via SSH protocol
 ```
 chmod 400 <pem_file_name>.pem
 ```
@@ -142,6 +142,12 @@ docker ps
 ```
 <img width="1420" alt="docker ps" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/3bfd109a-f426-41b8-85ca-0222cc6bbea8">
 
+or alternatively, you do this to verify your node JS application is running:
+```
+curl http://localhost:8080
+```
+<img width="1197" alt="verify-docker-run" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/d93f46bc-b868-47f8-ad0a-263ed9d8f17d">
+
 To note, in order to run and detach right away from docker session you may need to specify -d flag when starting the container
 ```
 docker run -d -p 8000:3001 <tag_name>
@@ -150,3 +156,38 @@ docker run -d -p 8000:3001 <tag_name>
 ```
 docker stop <container_id>
 ```
+
+## Deploying Using docker-compose
+Alternatively, you can build image and run a container using docker-compose.
+1. First, make sure that docker-compose is installed. If it is not, install by using this command
+```
+sudo apt update
+sudo apt install docker-compose
+```
+2. Create yaml file in the same directory with your Dockerfile and application files
+```
+version: "3.9"  # Use the appropriate version of Docker Compose
+
+services:
+  nodejs_app:
+    build:
+      context: . # Path to the directory containing your application files
+      dockerfile: Dockerfile  # Optional if your Dockerfile has the default name 'Dockerfile'
+    image: simple-server:1.8  # Set the image name and version tag here
+    ports:
+      - "8000:3000"
+    volumes:
+      - .:/usr/src/app
+```
+3. Build the image and then run the container using docker-compose in the same directory with your yaml file.
+```
+docker-compose build
+docker-compose up
+```
+<img width="1195" alt="docker-compose-build" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/6322e44d-c94c-4c70-a76b-5c7f52c381f7">
+
+4. Verify that your node JS application is running
+```
+curl http://localhost:8000/
+```
+<img width="1194" alt="verify-docker-compose" src="https://github.com/RevoU-FSSE-2/week-6-gkorompis/assets/52250424/765759fe-5d4e-4cbf-b163-5a9c95155c35">
