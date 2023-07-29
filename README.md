@@ -18,7 +18,7 @@ As a solution to lower variable cost provisioning for the desired computing spec
 1. Login to AWS console, and then access "EC2" resource in Service bar.
 2. Once EC2 dashboard is fully rendered, click "Launch Instance"
 3. Provide name to label EC2 Instance
-4. Select the desired amazon machine image (AMI) to build the virtual machine, in this project "Amazon Linux 2023 AMI" is selected.
+4. Select the desired amazon machine image (AMI) to build the virtual machine, in this project "Ubuntu Server 22.04 LTS (HVM)" image is selected.
 5. Select the type of image architecture, in this project "64bit(x86)" is selected.
 6. Select instance type, in this project "t3.2xlarge" is selected. This instance type caters to 8 vCPU and 32 GiB Memory.
 7. Create new key pair to login, in this project ".pem" file is created.
@@ -119,6 +119,9 @@ COPY . .
 
 #RUN will instruct docker to run npm install only during the image build process in order to install all necessary node JS packages as specified in package.json
 RUN npm install
+
+#Expose port related to service running in container
+EXPOSE 3000
 
 #CMD will instruct docker to run the command specified after, upon starting running the container
 CMD ["node", "app.js"]
